@@ -1,6 +1,8 @@
 package ch.fahrschule.model;
 
 
+import ch.fahrschule.methoden.Methoden;
+
 public class Schueler extends Person {
     private String fuehrerscheinKategorie;
     private TheorieKonto theorieKonto;
@@ -17,6 +19,7 @@ public class Schueler extends Person {
     public String getFuehrerscheinKategorie() {
         return fuehrerscheinKategorie;
     }
+
     public void setFuehrerscheinKategorie(String fuehrerscheinKategorie) {
         this.fuehrerscheinKategorie = fuehrerscheinKategorie;
     }
@@ -24,6 +27,7 @@ public class Schueler extends Person {
     public TheorieKonto getTheorieKonto() {
         return theorieKonto;
     }
+
     public void setTheorieKonto(TheorieKonto theorieKonto) {
         this.theorieKonto = theorieKonto;
     }
@@ -43,22 +47,24 @@ public class Schueler extends Person {
 
     @Override
     public void actions(int chosen) {
-
+        Methoden m = new Methoden();
         int count = 0;
         if (chosen == 1) {
             if (fSchule.getFahrlehrerList().isEmpty()) {
                 System.out.println("Zurzeit sind leider keine Fahrlehrer verfügbar");
-            } else {
-                System.out.println("Wähle von den folgenden einen Fahrlehrer aus:");
-                for (Fahrlehrer fahrlehrer : fSchule.getFahrlehrerList()) {
-                    count += 1;
-                    System.out.println(count);
-                    System.out.println(fahrlehrer.getName());
-                }
+                return;
             }
-            fSchule.bucheLektion(fSchule.findePersonNachID());
+            System.out.println("Wähle von den folgenden einen Fahrlehrer aus:");
+            for (Fahrlehrer fahrlehrer : fSchule.getFahrlehrerList()) {
+                count += 1;
+                System.out.println(count + ". " + fahrlehrer.getName());
+            }
+            Fahrlehrer selectedFahrlehrer = fSchule.getFahrlehrerList().get(m.intUserInput("Gib an welchen Lehrer du buchen willst >", 1, fSchule.getFahrlehrerList().size())-1);
+
+            fSchule.bucheLektion(this, selectedFahrlehrer);
         } else if (chosen == 2) {
-            System.out.println("Nummer 2 ");
+            return;
         }
     }
 }
+
