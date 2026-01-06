@@ -8,6 +8,7 @@ public class Main {
     UserActions u = new UserActions(fSchule);
     Methoden m = new Methoden();
     Person user;
+    int action;
     public Main() {
         System.out.println("--------------------------");
         System.out.println("  Willkommen bei unserer  ");
@@ -25,7 +26,11 @@ public class Main {
                 }
             } while (user == null);
         }
-        user.showMenue();
+        while (action != 3) {
+            user.showMenue();
+            action = m.intUserInput("Gib 1, 2 oder 3 ein,", 1, 3);
+            user.actions(action);
+        }
     }
 
     public static void main(String[] args) {

@@ -2,6 +2,7 @@ package ch.fahrschule.model;
 
 import ch.fahrschule.methoden.Methoden;
 
+
 public class Schueler extends Person {
     private String fuehrerscheinKategorie;
     private TheorieKonto theorieKonto;
@@ -31,13 +32,17 @@ public class Schueler extends Person {
         return "Schueler";
     }
 
+    @Override
     public void showMenue() {
-        Methoden m = new Methoden();
         System.out.println("Hallo Fahrschüler");
         System.out.println("Du übst für die" + fuehrerscheinKategorie + " Kategorie");
         System.out.println("1. Fahrlektion buchen");
         System.out.println("2. Gebuchte Fahrlektionen anzeigen");
         System.out.println("3. Ausloggen");
+    }
 
+    @Override
+    public void actions(int chosen) {
+        System.out.println("Schueler");
     }
 }

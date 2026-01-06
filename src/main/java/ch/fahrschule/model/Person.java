@@ -23,4 +23,5 @@ public abstract class Person {
     }
 
     public abstract void showMenue();
+    public abstract void actions(int chosen);
 }
