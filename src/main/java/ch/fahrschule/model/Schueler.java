@@ -1,14 +1,12 @@
 package ch.fahrschule.model;
 
-import ch.fahrschule.methoden.Methoden;
-
 
 public class Schueler extends Person {
     private String fuehrerscheinKategorie;
     private TheorieKonto theorieKonto;
 
     //konstruktor
-    public Schueler(String id, String name, String fuehrerscheinKategorie) {
+    public Schueler(String id, String name, String fuehrerscheinKategorie, Fahrschule fahrschule) {
         super(id, name);
         this.fuehrerscheinKategorie = fuehrerscheinKategorie;
     }
@@ -57,7 +55,7 @@ public class Schueler extends Person {
                     System.out.println(fahrlehrer.getName());
                 }
             }
-            fSchule.bucheLektion(fSchule.findePersonNachID())
+            fSchule.bucheLektion(fSchule.findePersonNachID());
         } else if (chosen == 2) {
             System.out.println("Nummer 2 ");
         }

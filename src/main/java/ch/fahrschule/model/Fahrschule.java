@@ -52,9 +52,6 @@ public class Fahrschule {
         Methoden m = new Methoden();
         System.out.println("Vielen dank dass Sie Fahrlektionen bei uns buchen.");
         int lektionen = m.intUserInput("Geben sie ein wie viele Lektionen sie buchen wollen >", 1, 12);
-        boolean bezahlt = m.booleanUserInput("Zahlen sie direkt? [1=Ja / 2=Nein]");
-        Fahrlektion flektion = new Fahrlektion(s, f, lektionen, bezahlt);
-        return flektion;
     }
 
     public double berechneOffeneKosten(Schueler s) {

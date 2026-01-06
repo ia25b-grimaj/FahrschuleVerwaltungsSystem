@@ -10,26 +10,28 @@ public class Main {
     Person user;
     int action;
     public Main() {
-        System.out.println("--------------------------");
-        System.out.println("  Willkommen bei unserer  ");
-        System.out.println("        FAHRSCHULE        ");
-        System.out.println("1. Wenn du neu hier bist  ");
-        System.out.println("2. Konto bereits erstellt ");
+        while (true) {
+            System.out.println("--------------------------");
+            System.out.println("  Willkommen bei unserer  ");
+            System.out.println("        FAHRSCHULE        ");
+            System.out.println("1. Wenn du neu hier bist  ");
+            System.out.println("2. Konto bereits erstellt ");
 
-        if (m.intUserInput("[1 / 2]\n", 1, 2) == 1) {
-            user = u.kontoErstellen();
-        } else {
-            do {
-                user = fSchule.findePersonNachID(m.stringUserInput("Logge dich mit deinem Nutzernamen ein >"));
-                if (user == null) {
-                    System.out.println("Dieser Benutzer exestiert nicht!");
-                }
-            } while (user == null);
-        }
-        while (action != 3) {
-            user.showMenue();
-            action = m.intUserInput("Gib 1, 2 oder 3 ein,", 1, 3);
-            user.actions(action);
+            if (m.intUserInput("[1 / 2]\n", 1, 2) == 1) {
+                user = u.kontoErstellen();
+            } else {
+                do {
+                    user = fSchule.findePersonNachID(m.stringUserInput("Logge dich mit deinem Nutzernamen ein >"));
+                    if (user == null) {
+                        System.out.println("Dieser Benutzer exestiert nicht!");
+                    }
+                } while (user == null);
+            }
+            while (action != 3) {
+                user.showMenue();
+                action = m.intUserInput("Gib 1, 2 oder 3 ein,", 1, 3);
+                user.actions(action);
+            }
         }
     }
 
