@@ -4,11 +4,13 @@ package ch.fahrschule.model;
 public class Schueler extends Person {
     private String fuehrerscheinKategorie;
     private TheorieKonto theorieKonto;
+    private final Fahrschule fSchule;
 
     //konstruktor
-    public Schueler(String id, String name, String fuehrerscheinKategorie, Fahrschule fahrschule) {
+    public Schueler(String id, String name, String fuehrerscheinKategorie, Fahrschule fSchule) {
         super(id, name);
         this.fuehrerscheinKategorie = fuehrerscheinKategorie;
+        this.fSchule = fSchule;
     }
 
     //getter setter
@@ -44,7 +46,6 @@ public class Schueler extends Person {
 
         int count = 0;
         if (chosen == 1) {
-            Fahrschule fSchule = new Fahrschule();
             if (fSchule.getFahrlehrerList().isEmpty()) {
                 System.out.println("Zurzeit sind leider keine Fahrlehrer verfügbar");
             } else {

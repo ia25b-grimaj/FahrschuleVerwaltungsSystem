@@ -9,13 +9,15 @@ public class Fahrschule {
     private ArrayList<Schueler> schuelerList;
     private ArrayList<Fahrlektion> fahrlektionList;
     private Schueler currentSchueler;
+    private Fahrschule fahrschule;
 
 
     //konstruktor
-    public Fahrschule(ArrayList<Fahrlehrer> fahrlehrerList, ArrayList<Schueler> schuelerList, ArrayList<Fahrlektion> fahrlektionList) {
+    public Fahrschule(ArrayList<Fahrlehrer> fahrlehrerList, ArrayList<Schueler> schuelerList, ArrayList<Fahrlektion> fahrlektionList, Fahrschule fahrschule) {
         this.fahrlehrerList = fahrlehrerList;
         this.schuelerList = schuelerList;
         this.fahrlektionList = fahrlektionList;
+        this.fahrschule = fahrschule;
     }
     public Fahrschule() {
         this.fahrlehrerList = new ArrayList<>();
