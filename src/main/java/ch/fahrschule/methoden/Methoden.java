@@ -8,6 +8,7 @@ public class Methoden {
             System.out.print(displayText);
             Scanner sc = new Scanner(System.in);
             int userInput = sc.nextInt();
+            sc.nextLine();
             if (userInput >= min && userInput <= max) {
                 return userInput;
             } else {
@@ -21,6 +22,7 @@ public class Methoden {
             System.out.print(displayText);
             Scanner sc = new Scanner(System.in);
             double userInput = sc.nextDouble();
+            sc.nextLine();
             if (userInput >= min && userInput <= max) {
                 return userInput;
             }

@@ -16,7 +16,6 @@ public class Main {
         System.out.println("2. Konto bereits erstellt ");
 
         if (m.intUserInput("[1 / 2]\n", 1, 2) == 1) {
-            u.kontoErstellen();
             user = u.kontoErstellen();
         } else {
             do {

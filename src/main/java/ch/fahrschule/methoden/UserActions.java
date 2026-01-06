@@ -13,7 +13,7 @@ public class UserActions {
         System.out.println("Als welche Rolle soll dieses Konto erstellt werden?");
         System.out.println("Neulenker oder Fahrlehrer");
         if (m.intUserInput("[1 / 2]\n", 1, 2) == 1) {
-            if (fSchule.getFahrlehrerList().isEmpty() || fSchule.getSchuelerList().isEmpty()) {
+            if (fSchule.getFahrlehrerList().isEmpty() && fSchule.getSchuelerList().isEmpty()) {
                 do {
                     username = m.stringUserInput("Gib deinen Nutzernamen ein: ");
                     if (fSchule.findePersonNachID(username) != null) {
@@ -29,7 +29,7 @@ public class UserActions {
         } else {
             do {
                 username = m.stringUserInput("Gib deinen Nutzernamen ein: ");
-                if (fSchule.findePersonNachID(username) == null) {
+                if (fSchule.findePersonNachID(username) != null) {
                     System.out.println("Dieser Nutzername exestiert schon bereits!");
                 }
             } while (fSchule.findePersonNachID(username) != null);
