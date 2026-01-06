@@ -1,5 +1,5 @@
 package ch.fahrschule.model;
 
 public interface Buchbar {
-    public double berechnePreis(int minuten);
+    public double berechnePreis(int lektionen,  Fahrlehrer fahrler);
 }

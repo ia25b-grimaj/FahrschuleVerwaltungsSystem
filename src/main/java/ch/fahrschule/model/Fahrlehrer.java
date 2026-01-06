@@ -19,6 +19,9 @@ public class Fahrlehrer extends Person {
     public String getRolle() {
         return "Fahrlehrer";
     }
+    public double getStundenLohn() {
+        return stundenLohn;
+    }
 
 
     public void showMenue() {
@@ -44,9 +47,6 @@ public class Fahrlehrer extends Person {
         } else if (chosen == 2) {
             System.out.println("Dein jetztiger Stundenlonhn beträgt " + stundenLohn + "CHF");
             stundenLohn = m.doubleUserInput("\n\nGib deinen neuen Stundenlohn ein >", 0, 500);
-        } else {
-
         }
     }
-
 }

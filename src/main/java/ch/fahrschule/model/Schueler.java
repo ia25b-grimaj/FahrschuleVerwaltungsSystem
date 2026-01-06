@@ -35,7 +35,7 @@ public class Schueler extends Person {
     @Override
     public void showMenue() {
         System.out.println("Hallo Fahrschüler");
-        System.out.println("Du übst für die" + fuehrerscheinKategorie + " Kategorie");
+        System.out.println("Du übst für die " + fuehrerscheinKategorie + " Kategorie");
         System.out.println("1. Fahrlektion buchen");
         System.out.println("2. Gebuchte Fahrlektionen anzeigen");
         System.out.println("3. Ausloggen");
@@ -43,6 +43,23 @@ public class Schueler extends Person {
 
     @Override
     public void actions(int chosen) {
-        System.out.println("Schueler");
+
+        int count = 0;
+        if (chosen == 1) {
+            Fahrschule fSchule = new Fahrschule();
+            if (fSchule.getFahrlehrerList().isEmpty()) {
+                System.out.println("Zurzeit sind leider keine Fahrlehrer verfügbar");
+            } else {
+                System.out.println("Wähle von den folgenden einen Fahrlehrer aus:");
+                for (Fahrlehrer fahrlehrer : fSchule.getFahrlehrerList()) {
+                    count += 1;
+                    System.out.println(count);
+                    System.out.println(fahrlehrer.getName());
+                }
+            }
+            fSchule.bucheLektion(fSchule.findePersonNachID())
+        } else if (chosen == 2) {
+            System.out.println("Nummer 2 ");
+        }
     }
 }

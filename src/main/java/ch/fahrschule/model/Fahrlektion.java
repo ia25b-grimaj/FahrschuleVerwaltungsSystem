@@ -3,13 +3,13 @@ package ch.fahrschule.model;
 public class Fahrlektion implements Buchbar {
     private Schueler schueler;
     private Fahrlehrer fahrler;
-    private int Minuten;
+    private int lektion;
     private boolean bezahlt;
 
-    public Fahrlektion(Schueler schueler, Fahrlehrer fahrler, int minuten, boolean bezahlt) {
+    public Fahrlektion(Schueler schueler, Fahrlehrer fahrler, int lektionen, boolean bezahlt) {
         this.schueler = schueler;
         this.fahrler = fahrler;
-        this.Minuten = minuten;
+        this.lektion = lektionen;
         this.bezahlt = bezahlt;
     }
 
@@ -17,12 +17,8 @@ public class Fahrlektion implements Buchbar {
         this.bezahlt = bezahlt;
     }
 
-    public String summary() {
-        return "Lücken füller";
-    }
-
     @Override
-    public double berechnePreis(int minuten) {
-        return 0;
+    public double berechnePreis(int lektionen, Fahrlehrer fahrler) {
+        return lektionen * fahrler.getStundenLohn();
     }
 }
