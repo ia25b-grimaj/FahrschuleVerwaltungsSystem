@@ -4,7 +4,6 @@ public abstract class Person {
     private final String id;
     private String name;
 
-    // Damit Schueler/Fahrlehrer in actions() auf die gleiche Fahrschule zugreifen können:
     private Fahrschule fahrschule;
 
     public Person(String id, String name) {

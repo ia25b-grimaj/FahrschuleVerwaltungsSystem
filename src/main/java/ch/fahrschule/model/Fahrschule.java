@@ -53,7 +53,14 @@ public class Fahrschule {
     public Fahrlektion bucheLektion(Schueler s, Fahrlehrer f) {
         Methoden m = new Methoden();
         System.out.println("Vielen dank dass Sie Fahrlektionen bei uns buchen.");
-        int lektionen = m.intUserInput("Geben sie ein wie viele Lektionen sie buchen wollen >", 1, 12);
+
+        int lektionen = m.intUserInput("Geben sie ein wie viele Lektionen sie buchen wollen > ", 1, 12);
+
+        Fahrlektion fl = new Fahrlektion(s, f, lektionen, false);
+        fahrlektionList.add(fl);
+
+        System.out.println("Erfolgreich gebucht: " + fl);
+        return fl;
     }
 
     public double berechneOffeneKosten(Schueler s) {
