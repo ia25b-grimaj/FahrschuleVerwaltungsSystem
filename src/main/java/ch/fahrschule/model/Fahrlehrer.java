@@ -10,8 +10,8 @@ public class Fahrlehrer extends Person {
     private double stundenLohn;
     private final List<String> kategorien = new ArrayList<>();
 
-    public Fahrlehrer(String id, String name, String lizenzNummer, double stundenLohn, Fahrschule fahrschule) {
-        super(id, name);
+    public Fahrlehrer(String id, String name, String lizenzNummer, double stundenLohn, Fahrschule fSchule) {
+        super(id, name, fSchule);
         this.lizenzNummer = lizenzNummer;
         this.stundenLohn = stundenLohn;
     }

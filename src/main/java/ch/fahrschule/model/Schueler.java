@@ -8,9 +8,10 @@ public class Schueler extends Person {
     private TheorieKonto theorieKonto;
     private final Fahrschule fSchule;
 
+
     //konstruktor
     public Schueler(String id, String name, String fuehrerscheinKategorie, Fahrschule fSchule) {
-        super(id, name);
+        super(id, name, fSchule);
         this.fuehrerscheinKategorie = fuehrerscheinKategorie;
         this.fSchule = fSchule;
     }
