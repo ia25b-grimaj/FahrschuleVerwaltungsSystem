@@ -9,15 +9,15 @@ public class Fahrschule {
     private ArrayList<Schueler> schuelerList;
     private ArrayList<Fahrlektion> fahrlektionList;
     private Schueler currentSchueler;
-    private Fahrschule fahrschule;
+    private Fahrschule fSchule;
 
 
     //konstruktor
-    public Fahrschule(ArrayList<Fahrlehrer> fahrlehrerList, ArrayList<Schueler> schuelerList, ArrayList<Fahrlektion> fahrlektionList, Fahrschule fahrschule) {
+    public Fahrschule(ArrayList<Fahrlehrer> fahrlehrerList, ArrayList<Schueler> schuelerList, ArrayList<Fahrlektion> fahrlektionList, Fahrschule fSchule) {
         this.fahrlehrerList = fahrlehrerList;
         this.schuelerList = schuelerList;
         this.fahrlektionList = fahrlektionList;
-        this.fahrschule = fahrschule;
+        this.fSchule = fSchule;
     }
     public Fahrschule() {
         this.fahrlehrerList = new ArrayList<>();
@@ -61,10 +61,6 @@ public class Fahrschule {
 
         System.out.println("Erfolgreich gebucht: " + fl);
         return fl;
-    }
-
-    public double berechneOffeneKosten(Schueler s) {
-        return 0;
     }
 
     public Person findePersonNachID(String id) {

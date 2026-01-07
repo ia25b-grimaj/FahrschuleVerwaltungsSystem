@@ -16,7 +16,6 @@ public class Fahrlehrer extends Person {
         this.stundenLohn = stundenLohn;
     }
 
-    public String getRolle() { return "Fahrlehrer"; }
 
     public String getLizenzNummer() { return lizenzNummer; }
     public void setLizenzNummer(String lizenzNummer) { this.lizenzNummer = lizenzNummer; }
@@ -28,7 +27,7 @@ public class Fahrlehrer extends Person {
 
     @Override
     public void showMenue() {
-        System.out.println("\nHallo " + getName() + " (" + getRolle() + ")");
+        System.out.println("\nHallo " + getName() + " (Fahrlehrer)");
         System.out.println("Was willst du tun?");
         System.out.println("1. Kategorien bearbeiten");
         System.out.println("2. Stundenlohn bearbeiten");

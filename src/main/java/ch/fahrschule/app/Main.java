@@ -8,7 +8,8 @@ public class Main {
     UserActions u = new UserActions(fSchule);
     Methoden m = new Methoden();
     Person user;
-    int action;
+    int startAction;
+    int menueAction;
     public Main() {
         while (true) {
             System.out.println("--------------------------");
@@ -16,21 +17,25 @@ public class Main {
             System.out.println("        FAHRSCHULE        ");
             System.out.println("1. Wenn du neu hier bist  ");
             System.out.println("2. Konto bereits erstellt ");
+            System.out.println("3. Programm verlassen");
 
-            if (m.intUserInput("[1 / 2]\n", 1, 2) == 1) {
+            startAction = m.intUserInput("[1 / 3]\n", 1, 3);
+            if (startAction == 1) {
                 user = u.kontoErstellen();
-            } else {
+            } else if (startAction == 2) {
                 do {
                     user = fSchule.findePersonNachID(m.stringUserInput("Logge dich mit deinem Nutzernamen ein >"));
                     if (user == null) {
                         System.out.println("Dieser Benutzer exestiert nicht!");
                     }
                 } while (user == null);
+            } else if (startAction == 3) {
+                return;
             }
-            while (action != 3) {
+            while (menueAction != 3) {
                 user.showMenue();
-                action = m.intUserInput("Gib 1, 2 oder 3 ein,", 1, 3);
-                user.actions(action);
+                menueAction = m.intUserInput("Gib 1, 2 oder 3 ein,", 1, 3);
+                user.actions(menueAction);
             }
         }
     }

@@ -33,10 +33,6 @@ public class Schueler extends Person {
         this.theorieKonto = theorieKonto;
     }
 
-    public String getRolle() {
-        return "Schueler";
-    }
-
     @Override
     public void showMenue() {
         System.out.println("Hallo Fahrschüler");
