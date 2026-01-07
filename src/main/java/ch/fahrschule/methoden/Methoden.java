@@ -35,10 +35,11 @@ public class Methoden {
     public boolean booleanUserInput(String displayText) {
         do {
             System.out.print(displayText);
-            if (sc.nextInt() == 2) {
-                return false;
-            } else {
+            int userInput = sc.nextInt();
+            if (userInput == 1) {
                 return true;
+            } else if (userInput == 2) {
+                return false;
             }
         } while (true);
     }

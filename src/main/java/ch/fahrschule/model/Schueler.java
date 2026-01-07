@@ -60,12 +60,14 @@ public class Schueler extends Person {
 
             fSchule.bucheLektion(this, selectedFahrlehrer);
         } else if (chosen == 2) {
-            if (fSchule.getFahrlehrerList().isEmpty()) {
+            if (fSchule.getFahrlektion().isEmpty()) {
                 System.out.println("Du hast keine Fahrlektionen gebucht");
             } else {
                 for (Fahrlektion fahrlektion : fSchule.getFahrlektion()) {
-                    count += 1;
-                    System.out.println(count + ". " + fahrlektion);
+                    if (fahrlektion.getSchueler().equals(this)) {
+                        count += 1;
+                        System.out.println(count + ". " + fahrlektion);
+                    }
                 }
             }
         }

@@ -16,7 +16,7 @@ public class Main {
 
     public Main() {
 
-        /*
+
         // --- Testdaten: 3 Fahrlehrer und 1 Fahrschüler erstellen ---
         Fahrlehrer fahrlehrer1 = new Fahrlehrer("L1", "Max Muster", "LIZ1234", 45.0, fSchule);
         Fahrlehrer fahrlehrer2 = new Fahrlehrer("L2", "Anna Beispiel", "LIZ5678", 50.0, fSchule);
@@ -30,7 +30,7 @@ public class Main {
         fSchule.schuelerHinzufuegen(schueler1);
 
         System.out.println("Fahrlehrer und Fahrschüler erfolgreich erstellt!");
-        */
+        
 
         while (true) {
             ui.startScreen();

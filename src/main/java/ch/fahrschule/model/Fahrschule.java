@@ -8,7 +8,6 @@ public class Fahrschule {
     private ArrayList<Fahrlehrer> fahrlehrerList;
     private ArrayList<Schueler> schuelerList;
     private ArrayList<Fahrlektion> fahrlektionList;
-    private Schueler currentSchueler;
     private Fahrschule fSchule;
 
 
@@ -26,13 +25,6 @@ public class Fahrschule {
     }
 
     //getter setter
-    public Schueler getCurrentSchueler() {
-        return currentSchueler;
-    }
-    public void setCurrentSchueler(Schueler currentSchueler) {
-        this.currentSchueler = currentSchueler;
-    }
-
     public ArrayList<Fahrlektion> getFahrlektion() {
         return fahrlektionList;
     }
