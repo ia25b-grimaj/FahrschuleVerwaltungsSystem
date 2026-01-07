@@ -30,12 +30,12 @@ public class Main {
         fSchule.schuelerHinzufuegen(schueler1);
 
         System.out.println("Fahrlehrer und Fahrschüler erfolgreich erstellt!");
-        
+
 
         while (true) {
             ui.startScreen();
 
-            startAction = m.intUserInput("[1 / 3]\n", 1, 3);
+            startAction = m.intUserInput("[1 / 2 / 3]\n", 1, 3);
             if (startAction == 1) {
                 user = u.kontoErstellen();
             } else if (startAction == 2) {
