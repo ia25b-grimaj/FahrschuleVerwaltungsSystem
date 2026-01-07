@@ -3,10 +3,11 @@ package ch.fahrschule.methoden;
 import java.util.Scanner;
 
 public class Methoden {
+    private final Scanner sc = new Scanner(System.in);
+
     public int intUserInput(String displayText, int min, int max) {
         do {
             System.out.print(displayText);
-            Scanner sc = new Scanner(System.in);
             int userInput = sc.nextInt();
             sc.nextLine();
             if (userInput >= min && userInput <= max) {
@@ -20,7 +21,6 @@ public class Methoden {
     public double doubleUserInput(String displayText,  double min, double max) {
         do {
             System.out.print(displayText);
-            Scanner sc = new Scanner(System.in);
             double userInput = sc.nextDouble();
             sc.nextLine();
             if (userInput >= min && userInput <= max) {
@@ -35,7 +35,6 @@ public class Methoden {
     public boolean booleanUserInput(String displayText) {
         do {
             System.out.print(displayText);
-            Scanner sc = new Scanner(System.in);
             if (sc.nextInt() == 2) {
                 return false;
             } else {
@@ -46,7 +45,6 @@ public class Methoden {
 
     public String stringUserInput(String displayText) {
         System.out.print(displayText);
-        Scanner sc = new Scanner(System.in);
         return sc.nextLine();
     }
 }

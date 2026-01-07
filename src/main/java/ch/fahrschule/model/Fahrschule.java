@@ -33,6 +33,10 @@ public class Fahrschule {
         this.currentSchueler = currentSchueler;
     }
 
+    public ArrayList<Fahrlektion> getFahrlektion() {
+        return fahrlektionList;
+    }
+
     public ArrayList<Fahrlehrer> getFahrlehrerList() {
         return fahrlehrerList;
     }

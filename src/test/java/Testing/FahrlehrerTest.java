@@ -17,12 +17,12 @@ public class FahrlehrerTest {
     }
 
     @Test
-    void constructor_setsInitialStundenlohn() {
+    void constructor() {
         assertEquals(80.0, fl.getStundenLohn(), 0.0001);
     }
 
     @Test
-    void setStundenLohn_setsValueCorrectly() {
+    void setStundenLohn() {
         fl.setStundenLohn(120.50);
         assertEquals(120.50, fl.getStundenLohn(), 0.0001);
     }
